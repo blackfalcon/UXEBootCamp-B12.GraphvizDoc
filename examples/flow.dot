@@ -1,0 +1,7 @@
+digraph {
+  node[shape=triangle]
+
+  "Home page" -> "About Us"[label="no"];
+  "Home page" -> Service[label="yes"];
+  "Contact us" -> "Home pag";
+}

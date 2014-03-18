@@ -1,0 +1,41 @@
+digraph {
+  node[shape=block]
+
+  "Document object" -> HTML;
+    HTML -> head;
+      head -> meta;
+        meta -> viewport;
+    HTML -> body;
+      body -> "id-'container'";
+        "id-'container'" -> header;
+          header -> h1;
+            h1 -> "GraphViz for discrete math students";
+          header -> nav;
+            nav -> ul;
+              ul -> li;
+                li -> a;
+                  a -> "Home";
+              ul -> li;
+                li -> a;
+                  a -> "Documentation";
+              ul -> li;
+                li -> a;
+                  a -> "Make a Graph";
+              ul -> li;
+                li -> a;
+                  a -> "About this site";
+              ul -> li;
+                li -> a;
+                  a -> "Related links";
+              ul -> li;
+                li -> a;
+                  a -> "Contact me";
+        "id-'container'" -> "id='main'";
+          "id='main'" -> h2;
+            h2 -> "Examples";
+          "id='main'" -> p;
+            p -> "GraphViz uses the";
+              "GraphViz uses the" -> code
+                code -> "DOT";
+            p -> "language to describe graphs, Below are examples of the language, with their resulting outputs.";
+}

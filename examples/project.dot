@@ -1,0 +1,94 @@
+digraph {
+  {
+    node [shape=rounded style=filled fillcolor="blue" fontcolor=white]
+    proj [label="Final Project" fontsize=24]
+    html [label="HTML"]
+    css [label="CSS"]
+    js [label="Js"]
+    git [label="GiT"]
+    styt [label="Style Tile"]
+    styg [label="Style guide"]
+    ruby [label="Ruby"]
+    NPM [label="Node.js"]
+    c [label="C/C++"]
+    ag [label="Agile"]
+    txt [label="Text Editor"]
+  }
+  proj -> {css html js git styt ag txt}
+
+  txt -> "Sublime Text" -> "Productivity" -> "Snippets" -> "JSON"
+
+  ag -> "UX" -> "Kanban" -> "Story Driven Dev" -> "Value driven" -> "Iterative"
+
+  git -> "CLI" -> "Bash" -> "git auto complete" -> "Git Workflow" -> "Github" -> "Pull request" {
+    "Bash" -> "Navigate" -> "open" -> "add/edit/delete"
+    "Bash" -> "dotfiles" -> "GitConfig" -> ".gitignore" -> ".bash_profile" -> "rsync"
+  }
+
+
+  styt -> "Typography" -> "Color patterns" -> "Web Fonts" -> "Iconography" -> "Imagery" {
+  }
+
+
+  styt -> styg
+  styg -> "Typography"
+
+  ruby -> "Middleman"
+  ruby -> "Rails"
+  ruby -> "RVM" -> "Ruby Gems"
+  ruby -> "Homebrew"
+
+  "Homebrew" -> NPM
+
+  "Homebrew" -> git
+
+  js -> NPM -> "npm" -> "Node-Sass" {
+    "npm" -> "Express" -> "Grunt"
+  }
+  js -> "JSON" -> "Grunt"
+  js -> "jQuery" -> "jQuery Plugins"
+  js -> "MVVM" -> "Angular" -> "Ember" -> "Backbone"
+
+  html -> "HTML5"
+    "HTML5" -> "Offline and Storage" -> "AppCache" -> "Local storage"
+    "HTML5" -> "Device access" -> "Camera" -> "Geo Location"
+    "HTML5" -> "Semantic web" -> "Elements and Tags" -> "Attributes" -> "ARIA" -> "Micro formats" -> "HTML5 forms" -> "DOM Tree"
+    "Semantic web" -> "usability" -> "shadow DOM"
+    "Elements and Tags" -> "<h1> != design" -> "Tables for data"
+    "HTML5" -> "media"
+    "media" -> "Images" -> "Responsive" -> "HiDpi" -> "<picture>" -> "Image Sets" -> "<figure>"
+    "media" -> "video" -> "ogv/h.264" -> "attributes" -> "fallbacks" -> "responsive" -> "mobile"
+    "media" -> "audio" -> "ogg/h.264" -> "attributes"
+
+  html -> "Structure" -> "h5bp" -> "Modernizer"
+  html -> "Abstractions" -> "HAML" -> "Jade" -> "Markdown"
+
+  css -> "Methodology" ->"OOCSS" -> "SMACSS" -> "BEM"
+    "OOCSS" -> "CSS Linter"
+  css -> "RWD" -> "Media Queries" -> "VW" -> "ems" -> "rems" -> "percentages"
+  css ->  "Modernizer"
+  css -> "CSS3" -> "Advanced graphics" -> "Animations" -> "Pseudo elements"
+  css -> "Grids" -> "Layout" {
+    "Layout" -> "Box model" -> "Positioning" -> "Floats" -> "Flex Box" -> "calc( ... )"
+    "Grids" -> "960.gs" -> "Skeleton"
+    "Grids" -> ruby -> "Compass" -> "Sass" -> "Susy"
+    "Grids" -> "Sass" -> "Bourbon" -> "Neat"
+    "Grids" -> "Node-Sass" -> "Bourbon"
+    "Floats" -> "Clear fix" -> "display: inline;" -> "column"
+  }
+  css -> "PreProcessors" {
+    "PreProcessors" -> ruby {
+      ruby -> "Sass" -> "SassMeister"
+    }
+    "PreProcessors" -> js {
+      js -> "LESS"
+      js -> "Stylus"
+    }
+    "PreProcessors" -> c {
+      c -> "libsass" -> "Node-Sass" -> "SassMeister"
+    }
+  }
+
+
+
+}
