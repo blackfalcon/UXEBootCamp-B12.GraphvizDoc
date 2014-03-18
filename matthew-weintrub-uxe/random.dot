@@ -1,0 +1,43 @@
+digraph test {
+    pages [label = "About Us"];
+    	abt [label = "Main Page"];
+    	 	media [label = "Media Slider"];
+    	 	article [label = "Article"]; 
+    	 	who [label = "Section - Who we Are"];
+    	 	skill [label = "Section - Skills"];
+    	 	team [label = "Section - Team members"];
+    	 		dev [label = "John Doe"];
+    	 			icon [label = "icon"];
+    	 		devi [label = "John Doe I"];
+    	 			iconi [label = "icon i"];
+    	 		devii[label = "John Doe I"];
+    	 			iconii [label = "icon ii"];
+   		 	client [label = "Section - Clients"];	
+   		 		logo [label = "Section - logos"];
+   		 	footer [label = "footer"];
+   		 		avada [label = "avada"];
+   		 		post [label = "posts"];
+   		 		tweet [label = "tweets"];
+   		 		werk [label = "links"];
+    slide [label = "Sliders"];
+    head [label = "Headers"];
+    home [label = "Home"];
+    port [label = "Portfolio"];
+        cls [label = "Classic"];
+        grd [label = "Grid"];
+    blog [label = "Blog"];
+    shop [label = "Shop"];
+    cart [label = "Cart"];
+    search [label = "Search"];
+
+    pages -> { slide head home port blog shop cart search}
+    port -> {cls grd} 
+    pages -> {abt}
+    abt -> {media article who skill team client footer }
+    team -> {dev devi devii }
+    dev -> {icon}
+    devi -> {iconi}
+    devii -> {iconii}
+    client -> {logo}
+    footer -> {avada post tweet werk}
+}
