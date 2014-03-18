@@ -1,0 +1,49 @@
+digraph{
+  node[shape=box]
+  Home -> News;
+  Home -> Entertainment;
+  Home -> Life;
+  Home -> Video;
+  Home -> More;
+
+  News -> World;
+  News -> Politics;
+  News -> Business;
+  News -> Tech;
+  News -> Sports;
+  News -> Longform;
+  News -> Ideas;
+
+  Entertainment -> Celebrity;
+  Entertainment -> Music;
+  Entertainment -> Rewind;
+  Entertainment -> Books;
+  Entertainment -> Comics;
+
+  Life -> Animals;
+  Life -> Food;
+  Life -> DIY;
+  Life -> LGBT;
+  Life -> Geeky;
+  Life -> Travel;
+  Life -> Style;
+
+  Video -> All;
+  Video -> Original;
+
+  Original -> Life_Hacks;
+  Original -> Awesome_Science;
+  Original -> Quizzes;
+  Original -> Animals;
+  Original -> Greatest_Hits;
+
+  More -> Hot;
+  More -> Quizzes;
+  More -> Community;
+  More -> GIF_Feed;
+  More -> UK;
+
+
+
+
+}
