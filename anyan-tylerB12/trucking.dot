@@ -1,0 +1,42 @@
+digraph{
+  node[shape="circle"]
+
+  "Grateful Dead" -> "Truckin'"
+  "Truckin'" -> "Keep Truckin' On..."[label="First Verse"]
+  "Keep Truckin' On..." -> "Arrows of Neon on Main Street"[label="First Verse"]
+  "Arrows of Neon on Main Street" ->"Typical City, Typical Daydream"
+  "Typical City, Typical Daydream" -> "What tomorrow brings"
+  "What tomorrow brings" -> "Dallas, Soft Machine"
+  "Dallas, Soft Machine" -> "Just won't let you be"
+  "Just won't let you be" -> "Speak of True Love"
+  "Speak of True Love" -> "Better Get Goin'"
+  "Better Get Goin'" -> "Down on the Streets All Alone"
+  "Down on the Streets All Alone" -> "Truckin'"
+  "Truckin'" -> "Got to Play Your Hand"[label="Second Verse"]
+  "Got to Play Your Hand" -> "Lay 'Em Down"
+  "Lay 'Em Down" -> "Sometimes the Lights"
+  "Sometimes the Lights" -> "What a Long Strange Trip It's Been"[label="bridge"]
+  "What a Long Strange Trip It's Been" -> "Sweet Jane Lost Her Sparkle"
+  "Sweet Jane Lost Her Sparkle" -> "Livin' on Cocaine, Ain't it a Shame"
+  "Livin' on Cocaine, Ain't it a Shame" -> "Truckin'"
+  "Truckin'" -> "Mellow Slow"[label="Third Verse"]
+  "Mellow Slow" -> "Keep Truckin' On..."
+  "Keep Truckin' On..." -> "Starin' Out the Hotel Window"[label="Third Verse"]
+  "Starin' Out the Hotel Window" -> "Kick the Door in Again"
+  "Kick the Door in Again" -> "Sleep Before I Travel"
+  "Sleep Before I Travel" -> "You Got a Warrant, You're Gonna Come In"
+  "You Got a Warrant, You're Gonna Come In" -> "Busted on Bourbon Street"
+  "Busted on Bourbon Street" -> "They Just Won't Let You Be"
+  "They Just Won't Let You Be" -> "Sick of Hangin' Around"
+  "Sick of Hangin' Around" -> "Settle Down"
+  "Settle Down" -> "Revoke Your Soul for Tryin'"
+  "Revoke Your Soul for Tryin'" -> "Look All Around"
+  "Look All Around" -> "Sometimes the Lights"
+  "Sometimes the Lights" -> "What a Long Strange Trip It's Been"[label="bridge"]
+  "What a Long Strange Trip It's Been" -> "Truckin'"
+  "Truckin'" -> "Back Where I Belong"[label="Outro"]
+  "Back Where I Belong" -> "Patch My Bones"
+  "Patch My Bones" -> "Get Back Truckin' Home"[label="end"]
+
+
+}
