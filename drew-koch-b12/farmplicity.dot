@@ -1,0 +1,47 @@
+digraph {
+  node[shape=egg]
+
+    Home -> "Sign In";
+    Home -> "Sign Up";
+    Home -> About;
+    Home -> Press;
+    Home -> Help;
+    Home -> "Terms & Privacy";
+    Home -> Contact;
+
+    "Sign Up" -> "Pending Approval Page";
+
+    "Sign In" -> "Chef Home Page"[label="if chef"];
+    "Chef Home Page" -> "Product Page";
+    "Chef Home Page" -> "Farmer Profile Page";
+    "Product Page" -> "Shopping Cart";
+    "Chef Home Page" -> "Shopping Cart";
+    "Chef Home Page" -> Inbox;
+    "Chef Home Page" -> "My Orders";
+    "Chef Home Page" -> "Card on Account";
+    "Chef Home Page" -> "Account Settings";
+    "Chef Home Page" -> "Sign Out";
+    "Sign Out" -> Home;
+    Inbox -> "Received Messages";
+    Inbox -> "Sent Messages";
+    "Received Messages" -> "Message Thread";
+    "Sent Messages" -> "Message Thread";
+    "Farmer Profile Page" -> "Product Page";
+    "Shopping Cart" -> "Delivery Preferences";
+    "Delivery Preferences" -> "Review Order";
+
+    "Sign In" -> "Farmer Home Page"[label="if farmer"];
+    "Farmer Home Page" -> "Create New Listing";
+    "Farmer Home Page" -> "Past Orders";
+    "Farmer Home Page" -> "Create Special Discount";
+    "Farmer Home Page" -> "Account Settings";
+    "Farmer Home Page" -> "View Profile";
+    "Farmer Home Page" -> "Referral Program";
+    "Farmer Home Page" -> "Sign Out";
+    "Farmer Home Page" -> Inbox;
+    "Farmer Home Page" -> "Product Page";
+    "Farmer Home Page" -> "Edit Listing";
+    "Farmer Home Page" -> "Upload Insurance";
+    "Farmer Home Page" -> "Pending Orders"
+
+  }
