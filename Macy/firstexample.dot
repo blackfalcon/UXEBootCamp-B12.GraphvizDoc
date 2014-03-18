@@ -1,0 +1,55 @@
+digraph {
+  subgraph cluster_0 {
+    label="Senate and 
+    House of Representatives";
+    g -> a;
+    a -> b;
+    b -> c[label="or",weight="or"];
+    b -> d;
+    d -> i;
+    d -> h[label="first",weight="first"];
+    d -> c[label="or",weight="or"];
+    h -> a[label="back to original house",weight="back to original house"];
+    i -> j[label="If floor passes same bill as Senate",weight="If floor passes same bill as Senate"];
+    i -> c[label="if not",weight="if not"];
+    i -> a[label="or",weight="or"];
+  }
+
+  subgraph cluster_2 {
+    label="President";
+    j -> k;
+    j -> l;
+    j -> m;
+  }
+
+  k -> n;
+  m -> o;
+  m -> p;
+  
+
+  a [label="Standing Committee"];
+  b [label="Committee sends bill to floor"];
+  c [label="IT DIES MUAHAHA"];
+  d [label="Floor Action: 
+  Bill is debated"];
+  g [label="Bill is proposed"];
+  h [label="Sent to other house"];
+  i [label="Goes to conference 
+  committt if different 
+  version of bill was passed 
+  in each house. 
+  Single version sent back 
+  to floor of each house"];
+  j [label="President has 10 days to:"];
+  k [label="Veto bill"];
+  l [label="Sign bill into law"];
+  m [label="Do nothing"];
+  n [label="Sent back to Congress, 
+  both House and Senate 
+  must have 2/3 majority 
+  vote to override veto"];
+  o [label="Bill becomes a law"];
+  p [label="Pocket veto"];
+
+
+  } 
