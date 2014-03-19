@@ -1,0 +1,35 @@
+digraph  {
+        node [shape = record];
+
+        node0 [ label ="Do I eat pizza tonight?"];
+        node1 [ label ="Will I work out?"];
+        node2 [ label ="Do I become couch potato for the night?"];
+        node3 [ label ="You're gonna get heart disease dude"];
+        node4 [ label ="Do I call my ex?"];
+        node6 [ label ="You wanna be unleathy?"];
+        node7 [ label ="Do you want a six pack?"];
+        node8 [ label ="You Win"];
+        node9 [ label ="You Lose"];
+        node13 [ label="Do I call the girl I met last week?"]
+
+
+
+        "node0" -> "node1"[label="YES"];
+        "node0" -> "node2"[label="NO"];
+
+        "node2" -> "node3"[label="YES"];
+        "node2" -> "node4"[label="NO"];
+        "node1" -> "node6"[label="NO"];
+        "node1" -> "node7"[label="YES"];
+        "node6" -> "node9"[label="NO"];
+        "node7" -> "node8"[label="YES"];
+        "node7" -> "node9" [label="NO"]
+        "node3" -> "node9"[label="You dug a deep hole, you automatically lose"];
+        "node2" -> "node13"[label="NO"];
+        "node13" -> "node9"[label="NO"];
+        "node13" -> "node8"[label="YES"];
+        "node6" -> "node8"[label="NO"];
+        "node4" -> "node9"[label="YES"];
+        "node4" -> "node8"[label="NO"];
+
+}
