@@ -1,0 +1,31 @@
+digraph {
+  node[shape=box]
+    "Home Page" -> "Cart"
+    "Home Page" -> "About"
+    "Home Page" -> "Sliders"
+    "Home Page" -> "Headers"
+    "Home Page" -> "Pages" -> "Page Sample 1"
+      "Pages" -> "Page Sample 2"
+    "Home Page" -> "Portfolio" -> "Recent Work"
+      "Portfolio" -> "Case Studies"
+    "Home Page" -> "Blog" -> "Blog Post"
+    "Home Page" -> "Shop"
+    subgraph cluster_0 {
+      label="commerce section";
+      "Shop" -> "Category 1"
+      "Shop" -> "Category 2"
+      "Shop" -> "Category 3"
+        "Category 1" -> "Product Detail"
+        "Category 2" -> "Product Detail"
+        "Category 3" -> "Product Detail"
+        "Product Detail" -> "Checkout Page"
+
+      "Cart" -> "Current Cart Status"
+        "Current Cart Status" -> "Checkout Page"[label="Checkout"]
+        "Current Cart Status" -> "Shop"[label="Continue Shopping"]
+    }
+    "Home Page" -> "Features"
+    "Home Page" -> "Shortcodes"
+    "Home Page" -> "Search"
+      "Search" -> "Search Results"
+  }
