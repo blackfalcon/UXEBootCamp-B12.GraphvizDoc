@@ -1,0 +1,45 @@
+digraph {
+	node[shape=box];
+	subgraph cluster_0 {
+		label="Songwriting";
+		"Noodling" -> "Write hook"[label="inspiration"];
+		"Write hook" -> "Program drum machine";
+		"Program drum machine" -> "Write hook";
+		"Write lyrics" -> "Write hook";
+		"Write hook" -> "Write lyrics";
+		"Write hook" -> "Finished song";
+		"Write lyrics" -> "Finished song";
+		"Program drum machine" -> "Finished song";
+		"Noodling" -> "Write lyrics"[label="inspirations"];
+	}
+	"Finished song" -> "Rent studio";
+	subgraph cluster_1 {
+		label="Recording";
+		"Rent studio" -> "Mic instruments"[label="Pay sound engineer"];
+		"Mic instruments" -> "Record drums";
+		"Mic instruments" -> "Record bass";
+		"Mic instruments" -> "Record guitars";
+		"Mic instruments" -> "Record vocals";
+		"Record drums" -> "Recorded song";
+		"Record bass" -> "Recorded song";
+		"Record guitars" -> "Recorded song";
+		"Record vocals" -> "Recorded song";
+	}
+	"Recorded song" -> "Mixing stage";
+	subgraph cluster_2 {
+		label="Production";
+		"Mixing stage" -> "How does it sound?";
+		"How does it sound?" -> "Acceptably bad";
+		"How does it sound?" -> "Awful";
+		"Awful" -> "Mixing stage"[label="Complain"];
+		"Acceptably bad" -> "Mastering";
+	}
+	"Mastering" -> "Press records"[label="Pay pressing plant"];
+	"Press records" -> "Give free copies to friends";
+	"Give free copies to friends" -> "You have no friends";
+	"Press records" -> "Marketing";
+	"Marketing" -> "Nobody cares";
+	"You have no friends" -> "Nobody cares";
+	"Nobody cares" -> "Work longer hours to recoup cost of record"[label="Wasted money"];
+	"Work longer hours to recoup cost of record" -> "Noodling"[label="Coping with misery"];
+}
